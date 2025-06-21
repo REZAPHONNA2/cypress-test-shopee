@@ -1,0 +1,15 @@
+{
+  "name": "cypress-test-shopee",
+  "version": "1.0.0",
+  "description": "Automation Cypress",
+  "license": "ISC",
+  "author": "RezaPhonna",
+  "type": "commonjs",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.0"
+  }
+}
