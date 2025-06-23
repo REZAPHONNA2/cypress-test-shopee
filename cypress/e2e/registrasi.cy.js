@@ -74,7 +74,7 @@ describe('Automation Test Store', () => {
 
 
 
-    it.only('Login Success | Positive Test Case', () => {
+    it('Login Success | Positive Test Case', () => {
     // Code Cypress
     // Visit Web Page
       cy.visit('https://automationteststore.com/')
@@ -96,12 +96,14 @@ describe('Automation Test Store', () => {
       cy.get('#loginFrm > fieldset > .btn').click()
     //  Assertion selector CSS
       cy.get('#customer_menu_top > :nth-child(1) > .top > .menu_text').should('have.text','Welcome back Reza')
+    // Validasi Hasil Screenshoot masuk kedalam folder
+      cy.screenshot('screenshot/Positive-Case-TrueAccount');
 
     })
 
 
 
-    it('Login Failed | Negative Test Case', () => {
+    it.only('Login Failed | Negative Test Case, Failed password', () => {
     // Code Cypress
     // Visit Web Page
       cy.visit('https://automationteststore.com/')
@@ -125,6 +127,8 @@ describe('Automation Test Store', () => {
       cy.get('.alert.alert-error.alert-danger') // Div class selector
       .should('exist')
       .and('contain.text', 'Error: Incorrect login or password provided.'); //Menggunakan validasi text yang muncul
+    // Validasi Hasil Screenshoot masuk kedalam folder screenshot
+      cy.screenshot('screenshot/Negative-Case-FailedPassword');
 
     })
 })
