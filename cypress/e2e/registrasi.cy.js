@@ -5,7 +5,7 @@
 
 describe('Automation Test Store', () => {
 
-    it.only('Registrasi Akun | Positive Test Case', () => {
+    it('Registrasi Akun | Positive Test Case', () => {
     // Code Cypress
     // Visit Web Page
       cy.visit('https://automationteststore.com/')
@@ -74,7 +74,7 @@ describe('Automation Test Store', () => {
 
 
 
-    it('Login Success | Positive Test Case', () => {
+    it.only('Login Success | Positive Test Case', () => {
     // Code Cypress
     // Visit Web Page
       cy.visit('https://automationteststore.com/')
