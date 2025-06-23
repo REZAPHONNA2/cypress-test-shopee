@@ -5,7 +5,7 @@
 
 describe('Automation Test Store', () => {
 
-    it('Registrasi Akun | Positive Test Case', () => {
+    it.only('Registrasi Akun | Positive Test Case', () => {
     // Code Cypress
     // Visit Web Page
       cy.visit('https://automationteststore.com/')
@@ -68,6 +68,9 @@ describe('Automation Test Store', () => {
       // cy.get('.col-md-2 > .btn').click()
     // Assertion Text success Login
 
+    // Screenshot Validasi field Mandatory terisi
+      cy.screenshot('screenshot/Mandatory-Field-Registration')
+
 
     })
 
@@ -103,7 +106,7 @@ describe('Automation Test Store', () => {
 
 
 
-    it.only('Login Failed | Negative Test Case, Failed password', () => {
+    it('Login Failed | Negative Test Case, Failed password', () => {
     // Code Cypress
     // Visit Web Page
       cy.visit('https://automationteststore.com/')
